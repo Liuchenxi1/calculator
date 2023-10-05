@@ -18,9 +18,9 @@ public class App {
         
     }
     public static void main(String[] args) {
-        int tryout = 0;
+        boolean continueCalculations = true;
 
-        while(True){ 
+        while(true){ 
             System.out.println("\nwhat you like to do?\n add\n substract\n multiply\n divide\n exit\n");
             String choice = getString("Enter: ");
 
@@ -59,12 +59,12 @@ public class App {
 
             System.out.println("Result is: " + result);
 
-            // if(tryout %4 == 0){
-            //     String pickup = getString("Do you want to continue: yes or no? ");
-            //     if (!pickup.equalsIgnoreCase("yes")) {
-            //         System.out.println("Goodbye");
-            //         break;
-            //     }
+                String continueChoice = getString("Do you want to continue: yes or no? ");
+                if (!continueChoice.equalsIgnoreCase("yes")) {
+                    System.out.println("Goodbye");
+                    continueCalculations = false;
+                    break;
+                }
             }
         }
     }
